@@ -1,0 +1,891 @@
+:root {
+  --blueBackground: #3f5c9a;
+  --darkBackground: #1c1c1c;
+  --darkBackground: #2e2e34;
+  --darkBorder: #2e2e34;
+  --darkText: #2e2e34;
+  --greyBorder: #828282;
+  --greyLine: #727276;
+  --greyText: #9f9fa1;
+  --lightBackground: #f0f0f0;
+  --productGreyBorder: #78787c;
+  --redBackground: #d71515;
+  --redBorder: #d71515;
+  --redText: #d71515;
+  --whiteBackground: #fff;
+  --whiteText: #fff;
+
+  --font9: 9px;
+  --font11: 11px;
+  --font12: 12px;
+  --font13: 13px;
+  --font14: 14px;
+  --font18: 18px;
+  --font30: 30px;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot'); 
+  src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+   url('fonts/fontawesome-webfont.woff2') format('woff2'),
+   url('fonts/fontawesome-webfont.woff') format('woff'),
+   url('fonts/fontawesome-webfont.ttf')  format('truetype'),
+   url('fonts/fontawesome-webfont.svg#svgFontName') format('svg');
+  }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+.inner-container {
+  margin: 0px auto;
+  width: 1020px;
+}
+
+.inner-container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.register-panel::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.log-in-off {
+  float: right;
+  padding: 10px 25px 0px 0px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: var(--whiteBackground);
+  border: 1px solid;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.register {
+  border-color: var(--redBorder);
+  color: var(--redText);
+  margin-right: 10px;
+}
+
+.log-in {
+  border-color: var(--darkBorder);
+  color: var(--darkText);
+}
+
+.menu-panel {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.logo {
+  background-image: url(images/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  height: 35px;
+  width: 215px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-list {
+  display: flex;
+  padding-left: 80px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu-link {
+  color: var(--darkText);
+  font-size: 12px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 35px;
+  padding: 0px 16px;
+  position: relative;
+}
+
+.menu-link::before {
+  background-color: var(--redBorder);
+  bottom: -20px;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0px;
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  width: 0px;
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.red-text {
+  color: var(--redText);
+}
+
+.basket-top {
+  background-color: var(--redBackground);
+  text-align: center;
+  width: 45px;
+} 
+
+.basket-top-link {
+  display: block;
+  height: 100%;
+}
+
+.basket {
+  position: relative;
+}
+
+.basket::before {
+  color: var(--whiteBackground);
+  content: '\f07a';
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  left: -2px;
+  position: absolute;
+  top: 15px;
+}
+
+.wishlist {
+  color: var(--whiteText);
+  font-size: var(--font11);
+  padding-top: 62px;
+  position: relative;
+}
+
+.wishlist::before {
+  border: 1px solid var(--whiteBackground);
+  content: "";
+  display: block;
+  left: 10px;
+  position: absolute;
+  top: 50px;
+  width: 24px;
+}
+
+#search-container{
+  position: relative;
+}
+
+.black-background {
+  background-image: url(images/black-background.jpg);
+  height: 123px;
+}
+
+.input-btn {
+  padding-left: 34%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.input-btn::before {
+  background-image: url(images/car.png);
+  content: "";
+  display: block;
+  height: 201px;
+  left: 0px;
+  position: absolute;
+  top: 35px;
+  width: 316px;
+}
+
+.search-input {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.search-input::after {
+  color: var(--darkBackground);
+  content: "\f002";
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 13px;
+  left: 418px;
+  position: absolute;
+  top: 6px;
+}
+
+.top-input {
+  border-left-color: var(--greyBorder);
+  border-right-color: var(--greyBorder);
+  border: none;
+  color: var(--greyText);
+  font-size: var(--font12);
+  font-style: italic;
+  height: 27px;
+  padding-left: 10px;
+  width: 440px;
+}
+
+.options {
+  background-color: var(--lightBackground);
+  color: var(--darkText);
+}
+
+.red-btn {
+  background-color: var(--redBackground);
+  border: none;
+  color: var(--whiteText);
+  font-size: var(--font13);
+  font-weight: bold;
+  height: 27px;
+  padding-left: 10px;
+  text-align: left;
+  width: 260px;
+}
+
+.light-background {
+  background-color: var(--lightBackground);
+  height: 145px;
+}
+
+.top-category {
+  padding-left: 34%;
+  padding-top: 15px;
+  position: relative;
+}
+
+.top-category::before {
+  background-image: url(images/supply.png);
+  content: "";
+  display: block;
+  height: 201px;
+  position: absolute;
+  right: 75px;
+  top: -56px;
+  width: 316px;
+}
+
+.category {
+  padding: 5px;
+}
+
+.category-btn {
+  background-color: var(--lightBackground);
+  border: 1px solid var(--darkBorder);  
+  color: var(--darkText);
+  font-size: var(--font13);
+  font-weight: bold;
+  height: 27px;
+  padding-left: 5px;
+  width: 200px;
+}
+
+.red-background {
+  background-color: var(--redBackground);
+  color: var(--whiteText);
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+#slider-container {
+  background-image: url(images/slider.png);
+  background-position: bottom;
+  height: 200px;
+}
+
+.left-arrow {
+  position: relative;
+}
+
+.left-arrow::before {
+  color: var(--whiteText);
+  content: "\f104";
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 30px;
+  position: absolute;
+  top: 75px;
+}
+
+.right-arrow {
+  position: relative;
+}
+
+.right-arrow::before {
+  color: var(--whiteText);
+  content: "\f105";
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 30px;
+  left: 980px;
+  position: absolute;
+  top: -106px;
+}
+
+.description {
+  color: var(--whiteText);
+  font-size: var(--font30);
+  padding: 30px 330px 0px 0px;
+  text-align: center;
+}
+
+.slider-btn {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.circles {
+  border-radius: 50%;
+  height: 9px;
+  padding: 0px;
+  transition: all 2ms ease-in-out;
+  width: 9px;
+}
+
+.circles:hover {
+  background-color: var(--redBackground);
+}
+
+#content-container {
+  background-color: var(--lightBackground);
+}
+
+.first-part {
+  display: flex;
+  padding: 20px 0px 55px 0px;
+}
+
+.left-part {
+  padding-left: 50px;
+}
+
+.right-part {
+  padding-left: 45px;
+}
+
+.product-list {
+  display: flex;
+  padding: 15px 0px 0px 7px;
+}
+
+.left-side {
+  padding-right: 10px;
+}
+
+.product {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.product-img {
+  border: 1px solid var(--productGreyBorder);
+  color: var(--darkText);
+  display: block;
+  height: 78px;
+  padding-bottom: 26px;
+  position: relative;
+  text-decoration: none;
+  width: 107px;
+}
+
+.product-btn {
+  border: 1px solid var(--darkBorder);
+  bottom: -1px;
+  display: inline-block;
+  font-size: var(--font9);
+  height: 26px;
+  left: -1px;
+  line-height: 26px;
+  position: absolute;
+  right: -1px;
+}
+
+.parts-body-car {
+  background-image: url(images/parts-body-car.png);
+  background-repeat: no-repeat;
+}
+
+.mirrors {
+  background-image: url(images/mirrors.png);
+  background-repeat: no-repeat;
+}
+
+.window-lifters {
+  background-image: url(images/window-lifters.png);
+  background-repeat: no-repeat;
+}
+
+.switch {
+  background-image: url(images/switch.png);
+  background-repeat: no-repeat;
+}
+
+.security-elements {
+  background-image: url(images/security-elements.png);
+  background-repeat: no-repeat;
+}
+
+.lighting {
+  background-image: url(images/lighting.png);
+  background-repeat: no-repeat;
+}
+
+.gas-springs {
+  background-image: url(images/gas-springs.png);
+  background-repeat: no-repeat;
+}
+
+.fuel-tank {
+  background-image: url(images/fuel-tank.png);
+  background-repeat: no-repeat;
+}
+
+.dark-btn {
+  padding-bottom: 10px;
+}
+
+.short-btn {
+  background-color: var(--darkBackground);
+  color: var(--whiteText);
+  font-size: var(--font12);
+  font-weight: bold;
+  height: 40px;
+  padding-left: 15px;
+  text-align: left;
+  width: 240px;
+}
+
+.long-btn {
+  background-color: var(--darkBackground);
+  color: var(--whiteText);
+  font-size: var(--font12);
+  font-weight: bold;
+  height: 40px;
+  padding-left: 15px;
+  text-align: left;
+  width: 636px;
+}
+
+.red-line {
+  position: relative;
+}
+
+.red-line::before {
+  background-color: var(--redBackground);
+  content: "";
+  display: block;
+  height: 40px;
+  left: -12px;
+  position: absolute;
+  top: 0px;
+  width: 10px;
+}
+
+.grey-line {
+  position: relative;
+}
+
+.grey-line::after {
+  background-color: var(--greyLine);
+  content: "";
+  display: block;
+  height: 26px;
+  position: absolute;
+  right: 26px;
+  top: 7px;
+  width: 1px;
+}
+
+.types-group {
+  padding: 5px 0px 20px 25px;
+}
+
+.groups {
+  border: 1px solid var(--darkBorder);
+  color: var(--darkText);
+  font-size: var(--font12);
+  font-weight: bold;
+  height: 25px;
+  padding-left: 36px;
+  text-align: left;
+  width: 192px;
+}
+
+.oils {
+  background-image: url(images/oils.png);
+  background-position: center left 10px;
+  background-repeat: no-repeat;
+}
+
+.chemistry {
+  background-image: url(images/chemistry.png);
+  background-position: center left 10px;
+  background-repeat: no-repeat;
+}
+
+.accessories {
+  background-image: url(images/accessories.png);
+  background-position: center left 10px;
+  background-repeat: no-repeat;
+}
+
+.car-mark {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.mark {
+  background-position: center center;
+  display: block;
+  height: 65px;
+  width: 80px;
+}
+
+.alfa-romeo {
+  background-image: url(images/alfa-romeo.png);
+  background-repeat: no-repeat;
+}
+
+.audi {
+  background-image: url(images/audi.png);
+  background-repeat: no-repeat;
+}
+
+.bmw {
+  background-image: url(images/bmw.png);
+  background-repeat: no-repeat;
+}
+
+.chevrolet {
+  background-image: url(images/chevrolet.png);
+  background-repeat: no-repeat;
+}
+
+.citroen {
+  background-image: url(images/citroen.png);
+  background-repeat: no-repeat;
+}
+
+.chrysler {
+  background-image: url(images/chrysler.png);
+  background-repeat: no-repeat;
+}
+
+.dacia {
+  background-image: url(images/dacia.png);
+  background-repeat: no-repeat;
+}
+
+.dodge {
+  background-image: url(images/dodge.png);
+  background-repeat: no-repeat;
+}
+
+.fiat {
+  background-image: url(images/fiat.png);
+  background-repeat: no-repeat;
+}
+
+.ford {
+  background-image: url(images/ford.png);
+  background-repeat: no-repeat;
+}
+
+.honda {
+  background-image: url(images/honda.png);
+  background-repeat: no-repeat;
+}
+
+.hyundai {
+  background-image: url(images/hyundai.png);
+  background-repeat: no-repeat;
+}
+
+.jaguar {
+  background-image: url(images/jaguar.png);
+  background-repeat: no-repeat;
+}
+
+.jeep {
+  background-image: url(images/jeep.png);
+  background-repeat: no-repeat;
+}
+
+.kia {
+  background-image: url(images/kia.png);
+  background-repeat: no-repeat;
+}
+
+.land-rover {
+  background-image: url(images/land-rover.png);
+  background-repeat: no-repeat;
+}
+
+.lexus {
+  background-image: url(images/lexus.png);
+  background-repeat: no-repeat;
+}
+
+.mazda {
+  background-image: url(images/mazda.png);
+  background-repeat: no-repeat;
+}
+
+.mercedes-benz {
+  background-image: url(images/mercedes-benz.png);
+  background-repeat: no-repeat;
+}
+
+.mitsubishi {
+  background-image: url(images/mitsubishi.png);
+  background-repeat: no-repeat;
+}
+
+.nissan {
+  background-image: url(images/nissan.png);
+  background-repeat: no-repeat;
+}
+
+.opel {
+  background-image: url(images/opel.png);
+  background-repeat: no-repeat;
+}
+
+.pegueot {
+  background-image: url(images/pegueot.png);
+  background-repeat: no-repeat;
+}
+
+.renault {
+  background-image: url(images/renault.png);
+  background-repeat: no-repeat;
+}
+
+.saab {
+  background-image: url(images/saab.png);
+  background-repeat: no-repeat;
+}
+
+.seat {
+  background-image: url(images/seat.png);
+  background-repeat: no-repeat;
+}
+
+.skoda {
+  background-image: url(images/skoda.png);
+  background-repeat: no-repeat;
+}
+
+.subaru {
+  background-image: url(images/subaru.png);
+  background-repeat: no-repeat;
+}
+
+.suzuki {
+  background-image: url(images/suzuki.png);
+  background-repeat: no-repeat;
+}
+
+.toyota {
+  background-image: url(images/toyota.png);
+  background-repeat: no-repeat;
+}
+
+.volkswagen {
+  background-image: url(images/volkswagen.png);
+  background-repeat: no-repeat;
+}
+
+.volvo {
+  background-image: url(images/volvo.png);
+  background-repeat: no-repeat;
+}
+
+.items-all {
+  display: flex;
+}
+
+.items {
+  text-align: center;
+  padding: 5px 5px 0px 22px;
+}
+
+.descr {
+  font-size: var(--font13);
+  padding-bottom: 5px;
+  color: var(--darkText);
+}
+
+.bold-txt {
+  font-weight: bold;
+}
+
+.picture {
+  background-image: url(images/picture.png);
+  background-repeat: no-repeat;
+  border: 1px solid var(--darkBorder);
+  height: 178px;
+  width: 177px;
+}
+
+.price {
+  color: var(--darkText);
+  font-size: var(--font13);
+  padding: 5px 0px;
+}
+
+.red-price {
+  color: var(--redText);
+  font-size: var(--font18);
+  font-weight: bold;
+}
+
+.details {
+  border: 1px solid var(--darkBorder);
+  color: var(--darkText);
+  font-size: var(--font13);
+  height: 27px;
+  width: 99px;
+}
+
+.second-part {
+  border-top: 1px solid var(--greyBorder);
+  padding: 30px 0;
+}
+
+.bottom-left-arrow {
+  position: relative;
+}
+
+.bottom-left-arrow::before {
+  color: var(--darkBackground);
+  content: "\f104";
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 25px;
+  font-weight: bold;
+  left: -3px;
+  position: absolute;
+  top: -4px;
+}
+
+.bottom-right-arrow {
+  position: relative;
+}
+
+.bottom-right-arrow::before {
+  color: var(--darkBackground);
+  content: "\f105";
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 25px;
+  font-weight: bold;
+  left: 1011px;
+  position: absolute;
+  top: -48px;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+}
+
+.castrol {
+  height: 27px;
+  width: 101px;
+}
+
+.elf {
+  height: 27px;
+  width: 77px;
+}
+
+.mobil {
+  height: 27px;
+  width: 78px;
+}
+
+.bosch {
+  height: 25px;
+  width: 112px;
+}
+
+.mannfilter {
+  height: 29px;
+  width: 71px;
+}
+
+.valeo {
+  height: 27px;
+  width: 68px;
+}
+
+#footer-conteiner {
+  background-color: var(--darkBackground);
+  height: 215px;
+}
+
+.footer {
+  display: flex;
+}
+
+.map-conteiner {
+  padding: 20px 0px 0px 90px;
+}
+
+.map {
+  border: 1px solid var(--greyBorder);
+}
+
+.bottom-contact {
+  padding: 25px 0px 0px 30px;
+}
+
+.red {
+  color: var(--redText);
+}
+
+.name {
+  font-size: var(--font18);
+  padding-bottom: 5px;
+}
+
+.txt {
+  color: var(--whiteText);
+  font-size: var(--font12);
+  padding-bottom: 10px;
+}
+
+.contact {
+  color: var(--whiteText);
+}
+
+.web {
+  font-size: var(--font14);
+}
